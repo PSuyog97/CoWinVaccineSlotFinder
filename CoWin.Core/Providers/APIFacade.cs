@@ -32,6 +32,7 @@ namespace CoWin.Providers
             request.AddHeader("accept", "application/json");
             request.AddHeader("Accept-Language", "en_US");
             request.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+            request.AddHeader("x-forwarded-for", "");
 
             if (Convert.ToBoolean(_configuration["CoWinAPI:ProtectedAPI:IsToBeUsed"]) && isCowinRelatedHeadersToBeUsed)
             {
